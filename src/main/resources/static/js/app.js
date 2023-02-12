@@ -26,6 +26,9 @@ const app = createApp({
     components: {
         VHome: Vue.defineAsyncComponent(() =>
             loadModule('components/Home.vue', options)
+        ),
+        VSampleDataTable: Vue.defineAsyncComponent(() =>
+            loadModule('components/SampleDataTable.vue', options)
         )
     },
 })
