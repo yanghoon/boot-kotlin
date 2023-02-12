@@ -1,5 +1,6 @@
 const { createApp } = Vue
 const { loadModule } = window['vue3-sfc-loader'];
+const { createVuetify } = Vuetify
 
 const options = {
     moduleCache: {
@@ -27,4 +28,6 @@ const app = createApp({
             loadModule('components/Home.vue', options)
         )
     },
-}).mount('#app')
+})
+.use(createVuetify())
+.mount('#app')
