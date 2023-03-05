@@ -16,15 +16,33 @@
     <title></title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vuetify@3.1.4/dist/vuetify.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vuetify@3.1.4/dist/vuetify-labs.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css">
 </head>
 
 <body>
     <div id="app">
-        <!-- <v-home></v-home> -->
         <v-app>
-            <v-main>
-                <v-home></v-home>
-                <v-sample-data-table></v-sample-data-table>
+            <v-app-var falt>
+                <v-container class="fill-height d-flex align-center">
+                    <v-avatar class="me-10 ms-4" color="grey-darken-1" size="32">
+                    </v-avatar>
+
+                    <v-app-bar-title>Simple</v-app-bar-title>
+                </v-container>
+            </v-app-var>
+
+            <v-main class="bg-grey-lighten-3">
+                <v-container>
+                    <v-row>
+                        <!-- Side Menu -->
+                        <!-- <v-col cols="2"></v-col> -->
+
+                        <!-- Main Content -->
+                        <v-col>
+                            <v-sample-data-table></v-sample-data-table>
+                        </v-col>
+                    </v-row>
+                </v-container>
             </v-main>
         </v-app>
     </div>

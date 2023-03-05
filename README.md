@@ -7,6 +7,7 @@ A template project for Spring Boot with Kotlin
 ```bash
 ./gradlew.bat build
 ./gradlew.bat build -x test
+./gradlew.bat build -x test --continuous
 ```
 ## Test
 
