@@ -7,6 +7,6 @@ import java.time.LocalDateTime
 @RestController
 class HelloController {
 
-    @GetMapping("/")
+    @GetMapping("/api/hello")
     fun hello() = "Hello Spring Boot with Kotlin - ${LocalDateTime.now()}"
 }
