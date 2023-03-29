@@ -1,5 +1,5 @@
 const { createApp } = Vue
-const { loadModule } = window['vue3-sfc-loader'];
+const { loadModule } = window['vue2-sfc-loader'];
 const { createVuetify } = Vuetify
 
 const options = {
@@ -22,15 +22,12 @@ const options = {
     },
 };
 
-const app = createApp({
+const app = new Vue({
+    el: '#app',
     components: {
-        VHome: Vue.defineAsyncComponent(() =>
-            loadModule('components/Home.vue', options)
-        ),
-        VSampleDataTable: Vue.defineAsyncComponent(() =>
-            loadModule('components/SampleDataTable.vue', options)
-        )
+        VHome: () => loadModule('components/Home.vue', options),
+        VSampleDataTable: () => loadModule('components/SampleDataTable.vue', options),
+        VSampleCalendar: () => loadModule('components/SampleCalendar.vue', options),
     },
+    vuetify: new Vuetify(),
 })
-.use(createVuetify())
-.mount('#app')

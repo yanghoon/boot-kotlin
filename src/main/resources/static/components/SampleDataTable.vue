@@ -1,6 +1,6 @@
 <template>
   <v-data-table
-    items-per-page.sync="itemsPerPage"
+    :items-per-page="5"
     :headers="headers"
     :items="desserts"
     item-value="name"
@@ -11,16 +11,16 @@
 <script>
 const headers = [
   {
-    title: "Dessert (100g serving)",
+    text: "Dessert (100g serving)",
     align: "start",
     sortable: false,
-    key: "name"
+    value: "name"
   },
-  { title: "Calories", align: "end", key: "calories" },
-  { title: "Fat (g)", align: "end", key: "fat" },
-  { title: "Carbs (g)", align: "end", key: "carbs" },
-  { title: "Protein (g)", align: "end", key: "protein" },
-  { title: "Iron (%)", align: "end", key: "iron" }
+  { text: "Calories", align: "end", value: "calories" },
+  { text: "Fat (g)", align: "end", value: "fat" },
+  { text: "Carbs (g)", align: "end", value: "carbs" },
+  { text: "Protein (g)", align: "end", value: "protein" },
+  { text: "Iron (%)", align: "end", value: "iron" }
 ];
 
 const desserts = [
